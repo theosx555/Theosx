@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Animated Hello World</title>
+    <style>
+        body {
+            background-color: black;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            overflow: hidden;
+        }
+
+        .hello {
+            font-size: 50px;
+            font-weight: bold;
+            color: #00ffff;
+            text-shadow: 0 0 10px #00ffff, 0 0 20px #00ffff, 0 0 40px #00ffcc;
+            position: absolute;
+            animation: bounce 3s infinite alternate ease-in-out;
+        }
+
+        @keyframes bounce {
+            0% { transform: translateY(0) scale(1); color: #ff00ff; }
+            50% { transform: translateY(-100px) scale(1.2); color: #00ff00; }
+            100% { transform: translateY(0) scale(1); color: #ffcc00; }
+        }
+    </style>
+</head>
+<body>
+    <div class="hello">Hello, World!</div>
+</body>
+</html>
